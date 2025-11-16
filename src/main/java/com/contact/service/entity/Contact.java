@@ -14,17 +14,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "contact")
+@Entity
+@Table(name = "contact_service_contacts")
 public class Contact {
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
+	@Column(name = "id", updatable = false, nullable = false)
 	private UUID id;
 
 	private String firstName;
